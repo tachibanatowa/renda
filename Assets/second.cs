@@ -11,10 +11,18 @@ public class second : MonoBehaviour
     //時間を表示するText型の変数
     public Text timeText;
 
+    bool start;
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            start = true;
+        }
+
+        if (start)
+        {
             //時間をカウントダウンする
             countdown -= Time.deltaTime;
 
@@ -26,6 +34,6 @@ public class second : MonoBehaviour
             {
                 timeText.text = "時間になりました！";
             }
-        
+        }
     }
 }

@@ -14,37 +14,48 @@ public class tachi : MonoBehaviour
 
 	//カウントダウン
 	public float countdown = 5.0f;
+
 	//時間を表示するText型の変数
 	public Text timeText;
+
+	bool start;
 
 	// フレーム毎に呼ばれる関数
 	void Update()
 	{
-		
+		if(Input.GetMouseButtonDown(0))
+        {
+			start = true;
+        }
 
-		// マウスがクリックされたら
-		if (Input.GetMouseButtonDown(0))
+
+		if (start)
 		{
-			// カウントを増やす
-			Cnt++;
-		}
 
-		//カウントをTextコンポーネントへ 
-		this.GetComponent<Text>().text = Cnt + "クリック";
+			// マウスがクリックされたら
+			if (Input.GetMouseButtonDown(0))
+			{
+				// カウントを増やす
+				Cnt++;
+			}
 
-		// もしtimerが0になったら
-		if (countdown <= 0)
-		{
-			// カウントを0に戻す
 			//カウントをTextコンポーネントへ 
-			this.GetComponent<Text>().text = "結果は" + result + "クリックでした～";
+			this.GetComponent<Text>().text = Cnt + "クリック";
+
+			// もしtimerが0になったら
+			if (countdown <= 0)
+			{
+				// カウントを0に戻す
+				//カウントをTextコンポーネントへ 
+				this.GetComponent<Text>().text = "結果は" + result + "クリックでした～";
+			}
+			else
+			{
+
+				result = Cnt;
+			}
+			// タイマーを減らす
+			countdown -= Time.deltaTime;
 		}
-		else
-		{
-		
-			result = Cnt;
-		}
-		// タイマーを減らす
-		countdown -= Time.deltaTime;
 	}
 }
