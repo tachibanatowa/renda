@@ -24,28 +24,21 @@ public class InGameInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		
+
+		// マウスがクリックされたら
 		if (Input.GetMouseButtonDown(0))
-		{
-			start = true;
+		{	
+			// カウントを増やす
+			Cnt++;
 		}
 
-
-		if (start)
-		{
-
-			// マウスがクリックされたら
-			if (Input.GetMouseButtonDown(0))
-			{
-				// カウントを増やす
-				Cnt++;
-			}
-
-			//カウントをTextコンポーネントへ 
-			Cnt1 = Cnt;
-			resultCnt = Cnt;
+		//カウントをTextコンポーネントへ 
+		Cnt1 = Cnt;
+		resultCnt = Cnt;
 			
 
-		}
+		
 	}
 }
 
