@@ -5,23 +5,14 @@ using UnityEngine.UI;
 
 public class tachi : MonoBehaviour
 {
-	// カウント用変数
-	int Cnt;
-	// 結果表示用変数
-	int result;
-	// タイマー用変数
-	int timer;
-
+	
+	
+	//リザルトへ数値を渡す用
 	public static int resultCnt;
 
-	//カウントダウン
-	public float countdown = 5.0f;
-
-	//時間を表示するText型の変数
-	public Text timeText;
-
+	
 	bool start;
-
+	
 	// フレーム毎に呼ばれる関数
 	void Update()
 	{
@@ -33,32 +24,14 @@ public class tachi : MonoBehaviour
 
 		if (start)
 		{
-
-			// マウスがクリックされたら
-			if (Input.GetMouseButtonDown(0))
-			{
-				// カウントを増やす
-				Cnt++;
-			}
-
 			//カウントをTextコンポーネントへ 
-			this.GetComponent<Text>().text = Cnt + "クリック";
+			this.GetComponent<Text>().text = InGameInput.Cnt1 + "クリック";
 
 			// もしtimerが0になったら
-			if (countdown <= 0)
+			if (InGametime.GameTime)
 			{
-				// カウントを0に戻す
-				//カウントをTextコンポーネントへ 
-				this.GetComponent<Text>().text = "結果は" + result + "クリックでした～";
+				
 			}
-			else
-			{
-
-				result = Cnt;
-				resultCnt = Cnt;
-			}
-			// タイマーを減らす
-			countdown -= Time.deltaTime;
 		}
 	}
 }

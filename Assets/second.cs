@@ -17,25 +17,25 @@ public class second : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            start = true;
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    start = true;
+        //}
 
-        if (start)
-        {
-            //時間をカウントダウンする
-            countdown -= Time.deltaTime;
+        //if (start)
+        //{
+        //    //時間をカウントダウンする
+        //    countdown -= Time.deltaTime;
 
-            //時間を表示する
-            timeText.text = countdown.ToString("f1") + "秒";
+        //    //時間を表示する
+        //    timeText.text = countdown.ToString("f1") + "秒";
 
-            //countdownが0以下になったとき
-            if (countdown <= 0)
-            {
-                timeText.text = "時間になりました！";
-                SceneManager.LoadScene("ResultScene");
-            }
-        }
+        //    //countdownが0以下になったとき
+        //    if (countdown <= 0)
+        //    {
+        //        timeText.text = "時間になりました！";
+                
+        //    }
+        //}
     }
 }

@@ -14,6 +14,6 @@ public class resultText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<Text>().text = "クリック回数は" + tachi.resultCnt + "でした";
+        this.GetComponent<Text>().text = "クリック回数は" + InGameInput.resultCnt + "でした";
     }
 }
