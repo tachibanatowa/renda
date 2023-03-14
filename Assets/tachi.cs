@@ -12,6 +12,8 @@ public class tachi : MonoBehaviour
 	// タイマー用変数
 	int timer;
 
+	public static int resultCnt;
+
 	//カウントダウン
 	public float countdown = 5.0f;
 
@@ -53,6 +55,7 @@ public class tachi : MonoBehaviour
 			{
 
 				result = Cnt;
+				resultCnt = Cnt;
 			}
 			// タイマーを減らす
 			countdown -= Time.deltaTime;

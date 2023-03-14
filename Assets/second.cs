@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class second : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class second : MonoBehaviour
             if (countdown <= 0)
             {
                 timeText.text = "時間になりました！";
+                SceneManager.LoadScene("ResultScene");
             }
         }
     }
