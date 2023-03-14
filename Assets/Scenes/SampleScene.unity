@@ -136,8 +136,6 @@ GameObject:
   - component: {fileID: 186611020}
   - component: {fileID: 186611019}
   - component: {fileID: 186611018}
-  - component: {fileID: 186611017}
-  - component: {fileID: 186611022}
   m_Layer: 5
   m_Name: Text (tachi)
   m_TagString: Untagged
@@ -165,18 +163,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 600, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &186611017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186611015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d03346f01f846bb449d3565b3c041757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &186611018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,18 +235,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186611015}
   m_CullTransparentMesh: 1
---- !u!114 &186611022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186611015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78c141feeb267bf479161b0cc27658d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,52 +387,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1230560254
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1230560255}
-  - component: {fileID: 1230560256}
-  m_Layer: 0
-  m_Name: secondControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1230560255
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230560254}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80, y: 15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1230560256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230560254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b230c56e5cc80649ac31d85a2ed7b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdown: 5
-  timeText: {fileID: 1640318498}
 --- !u!1 &1640318496
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640318497}
   - component: {fileID: 1640318499}
+  - component: {fileID: 1640318500}
   - component: {fileID: 1640318498}
   m_Layer: 5
   m_Name: Text (second)
@@ -539,6 +468,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640318496}
   m_CullTransparentMesh: 1
+--- !u!114 &1640318500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640318496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b230c56e5cc80649ac31d85a2ed7b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 1640318498}
 --- !u!1 &1881901553
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2090756571}
+  - component: {fileID: 2090756573}
   - component: {fileID: 2090756572}
   m_Layer: 0
   m_Name: tachiControl
@@ -671,7 +614,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2090756572
 MonoBehaviour:
@@ -682,9 +625,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2090756570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8ffa01d5461364cb72e06d39046c41, type: 3}
+  m_Script: {fileID: 11500000, guid: 78c141feeb267bf479161b0cc27658d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
-  countdown: 5
-  start: 0
+--- !u!114 &2090756573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090756570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03346f01f846bb449d3565b3c041757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  second: {fileID: 1640318500}
+  secondText: {fileID: 1640318498}
+  touchText: {fileID: 186611020}
