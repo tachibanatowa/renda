@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class tachi : MonoBehaviour
 {
 	// 表示する時間を表示.
-	public Second second;
+	public Text second;
 	public Text secondText;
 	public Text touchText;
 
@@ -16,7 +16,7 @@ public class tachi : MonoBehaviour
 	public static int resultCnt;
 
 	private InGametime timer;
-	private InGameInput tuchi;
+	private InGameCount tuchi;
 
 	public static int Cnt;
 
@@ -24,7 +24,7 @@ public class tachi : MonoBehaviour
 	{
 		// インスタンスを生成.
 		timer = new InGametime();
-		tuchi = new InGameInput();
+		tuchi = new InGameCount();
 	}
 
 	// フレーム毎に呼ばれる関数
@@ -46,7 +46,7 @@ public class tachi : MonoBehaviour
 				tuchi.ClickCount();
 
 			}
-
+			// 現在のクリック回数を取得する.
 			int click = tuchi.ClickNam();
 
 			//カウントをTextコンポーネントへ 

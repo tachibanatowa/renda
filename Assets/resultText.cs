@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class resultText : MonoBehaviour
 {
-    private InGameInput tuchi;
+    private InGameCount tuchi;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        tuchi = new InGameInput();
+        tuchi = new InGameCount();
     }
 
     // Update is called once per frame

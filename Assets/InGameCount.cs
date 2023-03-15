@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InGameInput : MonoBehaviour
+public class InGameCount : MonoBehaviour
 {
 	// カウント用変数
 	int Cnt;
