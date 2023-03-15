@@ -8,12 +8,17 @@ public class InGameCount : MonoBehaviour
 	int Cnt;
 
 	//tachiに渡す用
-	public static int resultNam;
+	public int resultNam;
 
+    private void Start()
+    {
+		resultNam = 0;
 
-	//マウスをクリックしたら呼び出され　カウントされるようにしている
-	//次いでにリザルト用の変数に数値を入れている
-	public void ClickCount()
+	}
+
+    //マウスをクリックしたら呼び出され　カウントされるようにしている
+    //次いでにリザルト用の変数に数値を入れている
+    public void ClickCount()
 	{
 		Cnt++;
 		resultNam = Cnt;
@@ -27,8 +32,7 @@ public class InGameCount : MonoBehaviour
 
 	//リザルトでゲーム画面でクリックした回数を渡すため
 	public int Clickresult()
-	{
-		
+	{	
 		return resultNam;
 	}
 

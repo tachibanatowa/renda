@@ -11,12 +11,15 @@ public class tachi : MonoBehaviour
 	public Text second;
 	public Text secondText;
 	public Text touchText;
+	public InGameCount countprefab; 
+
 
 	//リザルトへ数値を渡す用
 	public static int resultCnt;
 
 	private InGametime timer;
-	private InGameCount tuchi;
+	private InGameCount count1;
+
 
 	public static int Cnt;
 
@@ -24,12 +27,39 @@ public class tachi : MonoBehaviour
 	{
 		// インスタンスを生成.
 		timer = new InGametime();
-		tuchi = new InGameCount();
+
+
+
+		var hozi = FindObjectOfType<InGameCount>();
+		//Instantiate プレハブを作る機能
+		//シーン上にクローンがあれば、instantiateとdontdestroyをしない
+
+		if (null == hozi)
+		{
+			count1 = Instantiate<InGameCount>(countprefab);
+			DontDestroyOnLoad(count1.gameObject);
+		}
+		else
+		{
+            Destroy(hozi.gameObject);
+			count1 = Instantiate<InGameCount>(countprefab);
+			DontDestroyOnLoad(count1.gameObject);
+
+		}
+	
 	}
+
+
+	
+
 
 	// フレーム毎に呼ばれる関数
 	void Update()
 	{
+
+		
+		
+
 		// ボタンを押したらカウントを開始.
 		if (Input.GetMouseButtonDown(0) && timer.IsStart() == false)
 		{
@@ -43,11 +73,11 @@ public class tachi : MonoBehaviour
 			//クリックしたらcountする
 			if (Input.GetMouseButtonDown(0))
 			{
-				tuchi.ClickCount();
+				count1.ClickCount();
 
 			}
 			// 現在のクリック回数を取得する.
-			int click = tuchi.ClickNam();
+			int click = count1.ClickNam();
 
 			//カウントをTextコンポーネントへ 
 			touchText.text = click.ToString() + "クリック";
