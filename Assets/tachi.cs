@@ -16,11 +16,15 @@ public class tachi : MonoBehaviour
 	public static int resultCnt;
 
 	private InGametime timer;
+	private InGameInput tuchi;
+
+	public static int Cnt;
 
 	private void Start()
 	{
 		// インスタンスを生成.
 		timer = new InGametime();
+		tuchi = new InGameInput();
 	}
 
 	// フレーム毎に呼ばれる関数
@@ -36,16 +40,21 @@ public class tachi : MonoBehaviour
 		// タイマーがスタートしてるか？.
 		if (timer.IsStart())
 		{
-			//カウントをTextコンポーネントへ 
-			touchText.text = InGameInput.Cnt1 + "クリック";
+			//クリックしたらcountする
+			if (Input.GetMouseButtonDown(0))
+			{
+				tuchi.ClickCount();
 
+			}
+
+			int click = tuchi.ClickNam();
+
+			//カウントをTextコンポーネントへ 
+			touchText.text = click.ToString() + "クリック";
 			// 時間を更新させる.
 			timer.UpdateTime(Time.deltaTime);
-
-
 			// 現在の時間を取得する.
 			float time = timer.GetTime();
-
 			// 時間の表示する値を変更.
 			// あとで.
 			//second.SetTime(time);

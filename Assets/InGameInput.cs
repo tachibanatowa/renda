@@ -6,39 +6,31 @@ public class InGameInput : MonoBehaviour
 {
 	// カウント用変数
 	int Cnt;
-	// 結果表示用変数
-	int result;
-	//リザルトへ数値を渡す用
-	public static int resultCnt;
+
 	//tachiに渡す用
-	public static int Cnt1;
+	public static int resultNam;
 
-	bool start;
 
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-		
-
-		// マウスがクリックされたら
-		if (Input.GetMouseButtonDown(0))
-		{	
-			// カウントを増やす
-			Cnt++;
-		}
-
-		//カウントをTextコンポーネントへ 
-		Cnt1 = Cnt;
-		resultCnt = Cnt;
-			
-
-		
+	//マウスをクリックしたら呼び出され　カウントされるようにしている
+	//次いでにリザルト用の変数に数値を入れている
+	public void ClickCount()
+	{
+		Cnt++;
+		resultNam = Cnt;
 	}
+
+	//ゲーム画面に回数を表示するため
+	public int ClickNam()
+	{
+		return Cnt;
+	}
+
+	//リザルトでゲーム画面でクリックした回数を渡すため
+	public int Clickresult()
+	{
+		
+		return resultNam;
+	}
+
 }
 

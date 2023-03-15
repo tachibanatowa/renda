@@ -13,10 +13,10 @@ public class Second : MonoBehaviour
     bool start;
 
     // 描画の処理が分離できる.
-    public void SetTime(float countdown)
-    {
-        timeText.text = countdown.ToString("f1");
-    }
+    //public void SetTime(float countdown)
+    //{
+    //    timeText.text = countdown.ToString("f1");
+    //}
 
     // Update is called once per frame
     void Update()

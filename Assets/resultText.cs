@@ -5,15 +5,20 @@ using UnityEngine.UI;
 
 public class resultText : MonoBehaviour
 {
+    private InGameInput tuchi;
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        tuchi = new InGameInput();
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<Text>().text = "クリック回数は" + InGameInput.resultCnt + "でした";
+        int click = tuchi.Clickresult();
+
+        this.GetComponent<Text>().text = "クリック回数は" + click.ToString() + "でした";
     }
 }
